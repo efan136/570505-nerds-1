@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
   	<header class="main-header">
@@ -29,49 +31,50 @@
   	      <li class="service-list__item">
   	        <h3 class="service-list__item-heading">веб-сайты</h3>
   	        <p class="service-list__item-description">Мир никогда не будет прежним после того как увидит ваш сайт</p>
-  	        <a href="" service-list__item-btn>заказать</a>
+  	        <a class="service-list__item-link red-btn" href="">заказать</a>
   	      </li>
   	        <li class="service-list__item">
   	        <h3 class="service-list__item-heading">приложения</h3>
   	        <p class="service-list__item-description">Покорите топ-10 приложений в AppStore и Google Play</p>
-  	        <a href="" service-list__item-btn>заказать</a>
+  	        <a href="" class="service-list__item-link green-btn">заказать</a>
   	      </li>
   	        <li class="service-list__item">
   	        <h3 class="service-list__item-heading">презентации</h3>
   	        <p class="service-list__item-description">Вы даже не подозреваете, насколько вы изумительны!</p>
-  	        <a href="" service-list__item-btn>заказать</a>
+  	        <a href="" class="service-list__item-link yellow-btn">заказать</a>
   	      </li>
   	  	</ul>
-  	  	
   	  </section>
-  	  <section class="about">
-  	    <h2 class="visually-hidden">О нас</h2>
-  	    <p><b class="about-heading">Мы — маленькая, но гордая дизайн-студия из Краснодара</b>	</p>
-  	    <p class="about-description">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-  	    <h3 class="about-list__heading">ВЫПОЛНЯЕМ ЗАКАЗЫ НА РАЗРАБОТКУ:</h3>
-  	    <ul class="about-list">
-  	      <li class="about-list__item">Веб-сайтов любой сложности</li>
-  	      <li class="about-list__item">Мобильных приложений для iOS и Android</li>
-  	      <li class="about-list__item">Слайдшоу и видео для корпоративных презентаций</li>
-  	    </ul>
-  	  </section>
-  	  <section class="stats">
-  	  	<h2 class="visually-hidden">Наша статистика</h2>
-  	  	<img src="img/nerds-illustration.png" width="360" height="208" alt="логотип студии нердс">
-  	  	<table class="stats-table">
-  	  	  <caption>С 2004 ГОДА ЛЮБИМ ТОЧНОСТЬ ВО ВСЕМ:</caption>
-  	  	  <tr>
-  	  	  	<td>146 <span><sup>%</sup></span></td>
-  	  	  	<td>100 <span><sup>%</sup></span></td>
-  	  	  	<td>50 <span><sup>%</sup></span></td>
-  	  	  </tr>
-  	  	  <tr>
-  	  	  	<td>Уровень самоотдачи</td>
-  	  	  	<td>Соблюдение сроков</td>
-  	  	  	<td>Минимальная предоплата</td>
-  	  	  </tr>
-  	  	</table>
-  	  </section>
+      <div class="index-columns">
+  	    <section class="about">
+  	      <h2 class="visually-hidden">О нас</h2>
+  	      <p ><b class="about-heading">Мы — маленькая, но гордая дизайн-студия из Краснодара</b></p>
+  	      <p class="about-description">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+  	      <h3 class="about-list__heading">ВЫПОЛНЯЕМ ЗАКАЗЫ НА РАЗРАБОТКУ:</h3>
+  	      <ul class="about-list">
+  	        <li class="about-list__item">Веб-сайтов любой сложности</li>
+  	        <li class="about-list__item">Мобильных приложений для iOS и Android</li>
+  	        <li class="about-list__item">Слайдшоу и видео для корпоративных презентаций</li>
+  	      </ul>
+  	    </section>
+  	    <section class="stats">
+  	  	  <h2 class="visually-hidden">Наша статистика</h2>
+  	  	  <img src="img/nerds-illustration.png" width="360" height="208" alt="логотип студии нердс">
+  	  	  <table class="stats-table">
+  	  	    <caption class="stats-table__heading">С 2004 ГОДА ЛЮБИМ ТОЧНОСТЬ ВО ВСЕМ:</caption>
+  	  	    <tr class="stats-value">
+  	  	  	  <td>146 <span class="stats-value__percent"><sup>%</sup></span></td>
+  	  	  	  <td>100 <span class="stats-value__percent"><sup>%</sup></span></td>
+  	  	  	  <td>50 <span class="stats-value__percent"><sup>%</sup></span></td>
+  	  	    </tr>
+  	  	    <tr class="stats-table__description">
+  	  	  	  <td>Уровень самоотдачи</td>
+  	  	  	  <td>Соблюдение сроков</td>
+  	  	  	  <td>Минимальная предоплата</td>
+  	  	    </tr>
+  	  	  </table>
+  	    </section>
+      </div>
       <section class="portfolio">
         <h2 class="visually-hidden">Портфолио</h2>
         <ul class="portfolio-list">
@@ -85,18 +88,18 @@
         <h2 class="visually-hidden">как до нас добраться</h2>
         <img src="img/map.jpg" width="1440" height="416" alt="Санкт-Петербург,ул. Б. Конюшенная, д. 19/8">
         <h3 class="contacts-heading">NЁRDS DESIGN STUDIO</h3>
-        <p class="contacts-adress">191186, Санкт-Петербург,ул. Б. Конюшенная, д. 19/8</p>
+        <p class="contacts-adress">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
         <p class="contacts-phone">тел. +7 (812) 275-75-75</p>
-        <button class="contacts-btn" type="button">напишите нам</button>
+        <button class="contacts-btn btn" type="button">напишите нам</button>
         
       </section>
 
   	</main>
     <footer class="main-footer">
       <ul class="social-list">
-        <li class="social-list__item vk-btn"><a href="">мы вконтакте</a></li>
-        <li class="social-list__item fb-btn"><a href="">мы на фейсбук</a></li>
-        <li class="social-list__item inst-btn"><a href="">наш инстаграм</a></li>
+        <li class="social-list__item vk-btn btn"><a href="" >мы вконтакте</a></li>
+        <li class="social-list__item fb-btn btn"><a href="">мы на фейсбук</a></li>
+        <li class="social-list__item inst-btn btn"><a href="">наш инстаграм</a></li>
       </ul>
       <div class="discount">
         <b class="discount-heading">Давайте дружить, это выгодно!</b>
@@ -108,18 +111,18 @@
     <h2 class="pop-up__heading">Напишите нам</h2>
     <form method="post" action="https://echo.htmlacademy.ru">
       <p>
-        <label for="name"> Ваше имя:</label>
+        <label for="name" class="pop-up__label"> Ваше имя:</label>
         <input type="text" name="name" placeholder="Имя Фамилия" id="name" required>
       </p>
       <p>
-        <label for="email"> Ваш e-mail:</label>
+        <label for="email" class="pop-up__label"> Ваш e-mail:</label>
         <input type="email" name="email" placeholder="email@example.com" id="email" required>
       </p>
       <p>
-        <label for="feedback">Текст письма: </label>
+        <label for="feedback" class="pop-up__label">Текст письма: </label>
         <textarea name="feedback" rows="6" placeholder=" В свободной форме" id="feedback"></textarea>
       </p>
-      <button type="submit">отправить</button>
+      <button class="btn" type="submit">отправить</button>
 
     </form>
     <button type="button">закрыть</button>
