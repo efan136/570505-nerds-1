@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
   </head>
   <body class="inner-page">
   	<header class="main-header">
@@ -22,55 +25,55 @@
       </nav>
   	</header>
   	<main class="container">
-  	  <h1 class="inner-page__heading">магазин готовых шаблонов</h1>
+  	  <h1 class="inner-page__heading">Магазин готовых шаблонов</h1>
 
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
-            <legend>СЕТКА</legend>
-            <ul>
+            <legend class="filtr-heading">СЕТКА</legend>
+            <ul class="filters-list">
               <li class="filter-option">
                 <input type="radio" name="grid" value="adaptive" id="adapt" checked="">
-                <label for="adapt">Адаптивная</label>
+                <label class="filter-option__label" for="adapt">Адаптивная</label>
               </li>
               <li class="filter-option">
                 <input type="radio" name="grid" value="fixed" id="fix">
-                <label for="fix">Фиксированая</label>
+                <label class="filter-option__label" for="fix">Фиксированая</label>
               </li>
               <li class="filter-option">
                 <input type="radio" name="grid" value="rubber" id="rub">
-                <label for="rub">Резиновая</label>
+                <label class="filter-option__label" for="rub">Резиновая</label>
               </li>
             </ul>
           </fieldset>
           <fieldset>
-            <legend>ОСОБЕННОСТИ</legend>
-            <ul>
+            <legend class="filtr-heading">ОСОБЕННОСТИ</legend>
+            <ul class="filters-list">
               <li class="filter-option">
                 <input type="checkbox" name="slider" id="slider">
-                <label for="slider">Слайдер</label>
+                <label class="filter-option__label" for="slider">Слайдер</label>
               </li>
               <li class="filter-option">
                 <input type="checkbox" name="features" id="features">
-                <label for="features">Блок преимуществ</label>
+                <label class="filter-option__label" for="features">Блок преимуществ</label>
               </li>
               <li class="filter-option">
                 <input type="checkbox" name="news" id="news">
-                <label for="news">Новости</label>
+                <label class="filter-option__label" for="news">Новости</label>
               </li>
               <li class="filter-option">
                 <input type="checkbox" name="gallery" id="gallery">
-                <label for="gallery">Галерея</label>
+                <label class="filter-option__label" for="gallery">Галерея</label>
               </li>
               <li class="filter-option">
                 <input type="checkbox" name="basket" id="basket">
-                <label for="basket">Корзина</label>
+                <label class="filter-option__label" for="basket">Корзина</label>
               </li>
             </ul>
           </fieldset>
-          <button type="submit">ПОКАЗАТЬ</button>
+          <button type="submit" class="filters__btn btn_gray">ПОКАЗАТЬ</button>
         </form>
       </section>
 
@@ -78,7 +81,7 @@
       <section class="order"></section>
 
       <section class="catalog">
-        <h2 class="visually-hidden"></h2>
+        <h2 class="visually-hidden">Каталог макетов</h2>
         <ul class="catalog-list">
           <li class="catalog-list__item">
             <a href="">
@@ -87,7 +90,7 @@
             <div class="catalog-list__item--hover">
               <h3 class="catalog-list__item-heading"> <a href="">sedona</a></h3>
               <p class="catalog-list__item-description">информационный сайт для туристов</p>
-              <a href=" catalog-list__item-btn">9900 руб</a>
+              <a href="" class="catalog-list__item-btn btn">9900 руб</a>
             </div>
           </li>
           <li class="catalog-list__item">
@@ -97,7 +100,7 @@
             <div class="catalog-list__item--hover">
               <h3 class="catalog-list__item-heading"><a href=""> pink</a></h3>
               <p class="catalog-list__item-description">Продуктовый лендинг приложения для iOS и Android</p>
-              <a href=" catalog-list__item-btn">9900 руб</a>
+              <a href=" " class="catalog-list__item-btn btn">9900 руб</a>
             </div>
           </li>
           <li class="catalog-list__item">
@@ -107,7 +110,7 @@
             <div class="catalog-list__item--hover">
               <h3 class="catalog-list__item-heading"><a href=""> borodinski</a></h3>
               <p class="catalog-list__item-description">Сайт салона красоты. Для мужчин, да.</p>
-              <a href=" catalog-list__item-btn">9900 руб</a>
+              <a href=" " class="catalog-list__item-btn btn" >9900 руб</a>
             </div>
           </li>
           <li class="catalog-list__item">
@@ -117,7 +120,7 @@
             <div class="catalog-list__item--hover">
               <h3 class="catalog-list__item-heading"><a href=""> mishka</a></h3>
               <p class="catalog-list__item-description">Интернет-магазин вязаных игрушек</p>
-              <a href=" catalog-list__item-btn">9900 руб</a>
+              <a href="" class="catalog-list__item-btn btn" >9900 руб</a>
             </div>
           </li>
           <li class="catalog-list__item">
@@ -127,7 +130,7 @@
             <div class="catalog-list__item--hover">
               <h3 class="catalog-list__item-heading"><a href=""> a+</a></h3>
               <p class="catalog-list__item-description">Лендинг курсов повышения квалификации</p>
-              <a href=" catalog-list__item-btn">9900 руб</a>
+              <a href="" class="catalog-list__item-btn btn" >9900 руб</a>
             </div>
           </li>
           <li class="catalog-list__item">
@@ -137,7 +140,7 @@
             <div class="catalog-list__item--hover">
               <h3 class="catalog-list__item-heading"><a href=""> кваст</a></h3>
               <p class="catalog-list__item-description">Промо-сайт производителя крафтового кваса</p>
-              <a href=" catalog-list__item-btn">9900 руб</a>
+              <a href="" class="catalog-list__item-btn btn">9900 руб</a>
             </div>
           </li>
         </ul>
@@ -146,9 +149,9 @@
         <h2 class="visually-hidden">номерация страниц</h2>
         <ul class="pagination-list">
           <li class="pagination-list__item pagination-current"><a>1</a></li>
-          <li class="pagination-list__item"><a href="">2</a></li>
-          <li class="pagination-list__item"><a href="">3</a></li>
-          <li class="pagination-list__item"><a href="">следующая</a></li>
+          <li class="pagination-list__item"><a href="" class="btn_gray">2</a></li>
+          <li class="pagination-list__item"><a href="" class="btn_gray">3</a></li>
+          <li class="pagination-list__item"><a href="" class="btn_gray">следующая</a></li>
         </ul>
       </section>
   	  
@@ -156,9 +159,9 @@
   	</main>
     <footer class="main-footer">
       <ul class="social-list">
-        <li class="social-list__item vk-btn"><a href="">мы вконтакте</a></li>
-        <li class="social-list__item fb-btn"><a href="">мы на фейсбук</a></li>
-        <li class="social-list__item inst-btn"><a href="">наш инстаграм</a></li>
+        <li class="social-list__item vk-btn btn"><a href="" >мы вконтакте</a></li>
+        <li class="social-list__item fb-btn btn"><a href="">мы на фейсбук</a></li>
+        <li class="social-list__item inst-btn btn"><a href="">наш инстаграм</a></li>
       </ul>
       <div class="discount">
         <b class="discount-heading">Давайте дружить, это выгодно!</b>
@@ -166,4 +169,24 @@
       </div>
     </footer>
   </body>
+  <section class="pop-up">
+    <h2 class="pop-up__heading">Напишите нам</h2>
+    <form method="post" action="https://echo.htmlacademy.ru">
+      <p>
+        <label for="name" class="pop-up__label"> Ваше имя:</label>
+        <input type="text" name="name" placeholder="Имя Фамилия" id="name" required>
+      </p>
+      <p>
+        <label for="email" class="pop-up__label"> Ваш e-mail:</label>
+        <input type="email" name="email" placeholder="email@example.com" id="email" required>
+      </p>
+      <p>
+        <label for="feedback" class="pop-up__label">Текст письма: </label>
+        <textarea name="feedback" rows="6" placeholder=" В свободной форме" id="feedback"></textarea>
+      </p>
+      <button class="btn" type="submit">отправить</button>
+
+    </form>
+    <button type="button">закрыть</button>
+  </section>
 </html>
