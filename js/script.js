@@ -1,4 +1,4 @@
-<script >
+
 var ppbtn = document.querySelector(".contacts-btn");
 var popup = document.querySelector(".popup");
 var close = document.querySelector(".pop-up__close");
@@ -82,4 +82,4 @@ window.addEventListener("keydown", function(evt) {
   }
     }
   });
-    </script>
+   
