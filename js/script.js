@@ -1,4 +1,3 @@
-
 var ppbtn = document.querySelector(".contacts-btn");
 var popup = document.querySelector(".popup");
 var close = document.querySelector(".pop-up__close");
@@ -16,7 +15,6 @@ try {
 } catch (err) {
   isStorageSupport = false;
 }
-
 
 ppbtn.addEventListener("click", function (evt) { evt.preventDefault();
 popup.classList.add("modal-show");
@@ -76,9 +74,6 @@ window.addEventListener("keydown", function(evt) {
       pptextarea.classList.remove("invalid");
       ppemail.classList.remove("invalid");
       ppname.classList.remove("invalid");
-
-
-
   }
     }
   });
