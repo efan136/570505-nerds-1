@@ -1,0 +1,44 @@
+var ppbtn = document.querySelector(".contacts-btn");
+var popup = document.querySelector(".popup");
+var close = document.querySelector(".pop-up__close");
+var ppname = popup.querySelector("[name=name]");
+var form = popup.querySelector("form")
+var ppemail = popup.querySelector("[name=email]");
+var pptextarea = popup.querySelector("[name=feedback]");
+var storage = localStorage.getItem("ppname");
+
+ppbtn.addEventListener("click", function (evt) { evt.preventDefault();
+popup.classList.add("modal-show");
+ppname.focus();
+if (storage) {
+	ppname.value = storage;
+}
+});
+
+close.addEventListener("click", function (evt) { evt.preventDefault();
+
+popup.classList.remove("modal-show");
+popup.classList.remove("modal-error");
+});
+
+form.addEventListener("submit", function(evt) {
+	if (!ppname.value || !ppemail.value || !pptextarea.value) {
+	evt.preventDefault();
+	popup.classList.add("modal-error");
+	} else {
+		localStorage.setItem("ppname", ppname.value);
+	}
+});
+
+window.addEventListener("keydown", function(evt) {
+  if (evt.keyCode ===27) {evt.preventDefault();
+      if (popup.classList.contains("modal-show")) { popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+
+  }
+    }
+  });
+
+console.log(ppname.value);
+	console.log(ppemail.value);
+	console.log(pptextarea.value);

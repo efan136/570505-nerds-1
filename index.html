@@ -27,7 +27,36 @@
       </div>
   	</header>
   	<main class="">
-        <section class="slider"></section>
+        <section class="slider">
+      <div class="container">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+        <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+        <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+        <div class="slider-controls">
+          <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
+          <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
+          <label class="slider-controls-item slider-controls-item--3" for="product-3">Третий</label>
+        </div>
+        <ul class="slider-list">
+          <li class="slider-item">
+            <h3>Долго, дорого,<br> скрупулезно.</h3>
+            <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
+            <a class="slider-item-button button" href="#">Узнать больше</a>
+          </li>
+          <li class="slider-item">
+            <h3>Любим математику как никто другой</h3>
+            <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+            <a class="slider-item-button button" href="#">Узнать больше</a>
+          </li>
+          <li class="slider-item">
+            <h3>Только ночь,<br> только хардкор</h3>
+            <p>Работать днем, как все? Мы против этого.<br> Ближе к полуночи работа только начинается.</p>
+            <a class="slider-item-button button" href="#">Узнать больше</a>
+          </li>
+        </ul>  
+      </div>
+    </section>
         <div class="container">
   	    <h1 class="visually-hidden">дизайн-студия нердс</h1>
   	    <section class="services">
@@ -92,6 +121,7 @@
       </div>
       <section class="contacts">
         <h2 class="visually-hidden">как до нас добраться</h2>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CBFh4QaroB" width="100%" height="416" frameborder="1" allowfullscreen="true"></iframe>
         <img src="img/map.jpg" width="1440" height="416" alt="Санкт-Петербург,ул. Б. Конюшенная, д. 19/8">
         <div class="container">
           <div class="contacts-container">
@@ -132,27 +162,117 @@
           <p class="discount-text">Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </footer>
-  </body>
-  <section class="pop-up">
+
+     <section class="popup">
     <h2 class="pop-up__heading">Напишите нам</h2>
     <form class="pop-up__form" method="post" action="https://echo.htmlacademy.ru">
       <div class="pop-up__column">
       <p>
         <label for="name" class="pop-up__label"> Ваше имя:</label>
-        <input type="text" name="name" placeholder="Имя Фамилия" id="name" required>
+        <input type="text" name="name" placeholder="Имя Фамилия" id="name" >
       </p>
       <p>
         <label for="email" class="pop-up__label"> Ваш e-mail:</label>
-        <input type="email" name="email" placeholder="email@example.com" id="email" required>
+        <input type="email" name="email" placeholder="email@example.com" id="email" >
       </p>
       </div>
       <p>
         <label for="feedback" class="pop-up__label">Текст письма: </label>
-        <textarea name="feedback" rows="6" placeholder=" В свободной форме" id="feedback"></textarea>
+        <textarea name="feedback" rows="6" placeholder=" В свободной форме" id="feedback" ></textarea>
       </p>
       <button class="btn pop-up__btn" type="submit">отправить</button>
 
     </form>
     <button type="button" class="pop-up__close"><span class="visually-hidden">закрыть</span></button>
   </section>
+
+    <script >
+var ppbtn = document.querySelector(".contacts-btn");
+var popup = document.querySelector(".popup");
+var close = document.querySelector(".pop-up__close");
+var ppname = popup.querySelector("[name=name]");
+var form = popup.querySelector("form")
+var ppemail = popup.querySelector("[name=email]");
+var pptextarea = popup.querySelector("[name=feedback]");
+var storage = localStorage.getItem("ppname");
+var storageemail = localStorage.getItem("ppemail");
+var isStorageSupport = true;
+var storage = "";
+
+try {
+  storage = localStorage.getItem("ppname");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+
+ppbtn.addEventListener("click", function (evt) { evt.preventDefault();
+popup.classList.add("modal-show");
+ppname.focus();
+if (storage) {
+  ppname.value = storage;
+  ppemail.value = storageemail;
+  pptextarea.focus();
+} else {
+  pptextarea.focus();
+}
+});
+
+close.addEventListener("click", function (evt) { evt.preventDefault();
+
+popup.classList.remove("modal-show");
+popup.classList.remove("modal-error");
+ppname.classList.remove("invalid");
+ppemail.classList.remove("invalid");
+pptextarea.classList.remove("invalid");
+});
+
+form.addEventListener("submit", function(evt) {
+  if (!ppname.value || !ppemail.value || !pptextarea.value) {
+  evt.preventDefault();
+    popup.classList.remove("modal-error");
+      popup.offsetWidth = popup.offsetWidth;
+      popup.classList.add("modal-error");
+
+  } else {if (isStorageSupport)  {
+    localStorage.setItem("ppname", ppname.value);
+    localStorage.setItem("ppemail", ppemail.value);
+  }}
+});
+
+form.addEventListener("submit", function(evt) {
+  if (!ppname.value) {evt.preventDefault()
+  ppname.classList.add("invalid");}
+});
+
+form.addEventListener("submit", function(evt) {
+  if (!ppemail.value) {evt.preventDefault()
+  ppemail.classList.add("invalid");}
+});
+
+form.addEventListener("submit", function(evt) {
+  if (!pptextarea.value) {evt.preventDefault()
+  pptextarea.classList.add("invalid");}
+});
+
+
+window.addEventListener("keydown", function(evt) {
+  if (evt.keyCode ===27) {evt.preventDefault();
+      if (popup.classList.contains("modal-show")) 
+        { popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+      pptextarea.classList.remove("invalid");
+      ppemail.classList.remove("invalid");
+      ppname.classList.remove("invalid");
+
+
+
+  }
+    }
+  });
+    </script>
+  </body>
+ 
+
 </html>
+
