@@ -702,6 +702,8 @@ a {
 
 .contacts {
 	position: relative;
+	margin-left:auto;
+	margin-right: auto;
 	margin-bottom: 69px;
 	height: 416px;
 }
