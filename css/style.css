@@ -712,10 +712,12 @@ a {
 	z-index: -1;
 	top:0;
 	left:0;
+	width: 100%;
 }
 
 .contacts iframe {
 	border:0;
+	width: 100%;
 }
 
 
@@ -897,8 +899,8 @@ a {
 }
 
 
-.popup input,
-.popup textarea {
+.popup-input,
+.popup-textarea {
 	border: 2px solid #d7dcde;
 }
 
@@ -924,14 +926,14 @@ a {
 }
 
 
-.popup input:hover,
-.popup textarea:hover {
+.popup-input:hover,
+.popup-textarea:hover {
 	border: 2px solid #b4b9bb;
 }
 
 
-.popup input:focus,
-.popup textarea:focus {
+.popup-input:focus,
+.popup-textarea:focus {
 	outline: none;
 	border: 2px solid #000000;
 }
@@ -1684,6 +1686,12 @@ input[type="radio"]:focus + .radio-indicator {
 
 
 .invalid {
-	border: 2px solid #e74246 !important;
-	color: #e74246 !important;
+	border: 2px solid #e74246;
+	color: #e74246;
+}
+
+.invalid:hover,
+.invalid:focus {
+	border: 2px solid #e74246;
+	color: #e74246;
 }

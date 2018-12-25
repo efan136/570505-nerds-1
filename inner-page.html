@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body class="inner-page">
   	<header class="main-header">
@@ -213,7 +213,7 @@
       </div>
   	  <section class="contacts">
         <h2 class="visually-hidden">как до нас добраться</h2>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CBFh4QaroB" width="100%" height="416" allowfullscreen="true"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CBFh4QaroB" width="1440" height="416"></iframe>
         <img src="img/map.jpg" width="1440" height="416" alt="Санкт-Петербург,ул. Б. Конюшенная, д. 19/8">
         <div class="container">
           <div class="contacts-container">
@@ -259,16 +259,16 @@
         <div class="pop-up__column">
           <p>
             <label for="name" class="pop-up__label"> Ваше имя:</label>
-            <input type="text" name="name" placeholder="Имя Фамилия" id="name" >
+            <input  class="popup-input" type="text" name="name" placeholder="Имя Фамилия" id="name" >
           </p>
           <p>
             <label for="email" class="pop-up__label"> Ваш e-mail:</label>
-            <input type="email" name="email" placeholder="email@example.com" id="email" >
+            <input class="popup-input" type="email" name="email" placeholder="email@example.com" id="email" >
           </p>
         </div>
         <p>
           <label for="feedback" class="pop-up__label">Текст письма: </label>
-          <textarea name="feedback" rows="6" placeholder=" В свободной форме" id="feedback" ></textarea>
+          <textarea class="popup-textarea" name="feedback" rows="6" placeholder=" В свободной форме" id="feedback" ></textarea>
         </p>
         <button class="btn pop-up__btn" type="submit">отправить</button>
       </form>
