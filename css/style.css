@@ -1006,6 +1006,18 @@ a {
 
 /*------------inner-page----------------*/
 
+* {
+	outline: 1px solid red;
+}
+
+.inner-page {
+	background-image: url(../img/nerds-catalog.jpg);
+	background-repeat: no-repeat;
+	background-size: 1440px 3213px;
+	margin:0 auto;
+	outline: 1px solid blue;
+}
+
 .inner-page .main-header {
 	border: 1px solid transparent;
 	margin-bottom: 54px;
@@ -1408,8 +1420,10 @@ input[type="radio"]:focus + .radio-indicator {
 
 
 .arrow-down {
+	display: block;
 	width: 11px;
 	position: relative;
+	background-clip: blue;
 }
 
 
@@ -1421,15 +1435,16 @@ input[type="radio"]:focus + .radio-indicator {
 	opacity: 0.2;
 	width: 11px;
 	height: 11px;
-	top:7px;
+	bottom: -20px;
 	left:0;
 }
 
 
 .arrow-up {
-	position: relative;
+	display: block;
 	width: 11px;
-	height: 11px
+	position: relative;
+	background-clip: blue;
 }
 
 
@@ -1441,8 +1456,8 @@ input[type="radio"]:focus + .radio-indicator {
 	opacity: 0.2;
 	width: 11px;
 	height: 11px;
-	top:7px;
-	left:-13px;
+	bottom:-20px;
+	left:0px;
 }
 
 
