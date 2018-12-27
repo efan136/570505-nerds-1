@@ -16,65 +16,75 @@ try {
   isStorageSupport = false;
 }
 
-ppbtn.addEventListener("click", function (evt) { evt.preventDefault();
-popup.classList.add("modal-show");
-ppname.focus();
-if (storage) {
-  ppname.value = storage;
-  ppemail.value = storageemail;
-  pptextarea.focus();
-} else {
-  pptextarea.focus();
+ppbtn.addEventListener
+  ("click", function (evt)
+  {
+  evt.preventDefault();
+  popup.classList.add("modal-show");
+  ppname.focus();
+  if (storage) {
+    ppname.value = storage;
+    ppemail.value = storageemail;
+    pptextarea.focus();
+  } else {
+    pptextarea.focus();
+  }
+});
+
+close.addEventListener
+  ("click", function (evt) 
+  {
+  evt.preventDefault();
+  popup.classList.remove("modal-show");
+  popup.classList.remove("modal-error");
+  ppname.classList.remove("invalid");
+  ppemail.classList.remove("invalid");
+  pptextarea.classList.remove("invalid");
+});
+
+form.addEventListener("submit", function(evt) {
+  if (!ppname.value || !ppemail.value || !pptextarea.value) 
+  {
+  evt.preventDefault();
+  popup.classList.remove("modal-error");
+  popup.offsetWidth = popup.offsetWidth;
+  popup.classList.add("modal-error");
+  } else {
+    if (isStorageSupport)  {
+      localStorage.setItem("ppname", ppname.value);
+      localStorage.setItem("ppemail", ppemail.value);
+  }
 }
 });
 
-close.addEventListener("click", function (evt) { evt.preventDefault();
-
-popup.classList.remove("modal-show");
-popup.classList.remove("modal-error");
-ppname.classList.remove("invalid");
-ppemail.classList.remove("invalid");
-pptextarea.classList.remove("invalid");
-});
-
-form.addEventListener("submit", function(evt) {
-  if (!ppname.value || !ppemail.value || !pptextarea.value) {
-  evt.preventDefault();
-    popup.classList.remove("modal-error");
-      popup.offsetWidth = popup.offsetWidth;
-      popup.classList.add("modal-error");
-
-  } else {if (isStorageSupport)  {
-    localStorage.setItem("ppname", ppname.value);
-    localStorage.setItem("ppemail", ppemail.value);
-  }}
-});
-
-form.addEventListener("submit", function(evt) {
+form.addEventListener("submit", function(evt) 
+  {
   if (!ppname.value) {evt.preventDefault()
   ppname.classList.add("invalid");}
 });
 
-form.addEventListener("submit", function(evt) {
+form.addEventListener("submit", function(evt) 
+  {
   if (!ppemail.value) {evt.preventDefault()
   ppemail.classList.add("invalid");}
 });
 
-form.addEventListener("submit", function(evt) {
+form.addEventListener("submit", function(evt)
+  {
   if (!pptextarea.value) {evt.preventDefault()
   pptextarea.classList.add("invalid");}
 });
 
-
-window.addEventListener("keydown", function(evt) {
+window.addEventListener("keydown", function(evt)
+  {
   if (evt.keyCode ===27) {evt.preventDefault();
-      if (popup.classList.contains("modal-show")) 
-        { popup.classList.remove("modal-show");
+    if (popup.classList.contains("modal-show")) 
+      { popup.classList.remove("modal-show");
       popup.classList.remove("modal-error");
       pptextarea.classList.remove("invalid");
       ppemail.classList.remove("invalid");
       ppname.classList.remove("invalid");
-  }
     }
+   }
   });
    
