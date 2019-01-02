@@ -324,6 +324,7 @@ a {
   	font-size: 55px;
   	line-height: 55px;
   	font-weight: 500;
+  	color: #000000;
 }
 
 
@@ -537,7 +538,8 @@ a {
 	padding:0;
 	font-size: 45px;
 	line-height: 45px;
-	font-weight: 500;	
+	font-weight: 500;
+	color: #000000;	
 }
 
 
@@ -553,7 +555,8 @@ a {
 	margin-bottom: 24px;
 	font-size: 16px;
 	line-height: 24px;
-	font-weight: 700;	
+	font-weight: 700;
+	color: #000000;	
 }
 
 
@@ -906,6 +909,7 @@ a {
 
 .popup-input,
 .popup-textarea {
+	resize: none;
 	border: 2px solid #d7dcde;
 }
 
@@ -1121,7 +1125,7 @@ a {
 
 
 .range-controls .bar {
-	width: 70%;
+	width: 152px;
 	height: 2px;
 	background: #00ca74;
 }
@@ -1144,12 +1148,12 @@ a {
 
 
 .range-controls .toggle-min {
-  	left: 50px;
+  	left: 20px;
 }
 
 
 .range-controls .toggle-max {
-	left: 110px;
+	left: 160px;
 }
 
 
@@ -1328,6 +1332,7 @@ a {
 	font-size: 18px;
 	line-height: 22px;
 	font-weight: 700;
+	color: #000000;
 	text-transform: uppercase;
 }
 
@@ -1500,15 +1505,15 @@ a {
 
 
 .catalog-list__item--hvr {
-	display: none;
+	display: block;
 	position: absolute;
 	z-index: 1;	
-	bottom:7px;
-	padding-top: 23px;
+	bottom:4px;
+	padding-top: 29px;
 	padding-left:60px;
 	padding-right: 60px;
 	padding-bottom: 43px;
-	height: 164px;
+	height: 160px;
 	width: 240px;
 	background-color: #eeeeee;
 	text-align: center;
@@ -1518,7 +1523,7 @@ a {
 
 .catalog-list__item-heading  {
 	margin: 0;
-	margin-bottom: 19px;
+	margin-bottom: 15px;
 	font-size: 18px;
 	line-height: 30px;
 	color: #000000;
@@ -1534,7 +1539,7 @@ a {
 
 .catalog-list__item-description {
 	margin: 0;
-	margin-bottom: 24px;
+	margin-bottom: 28px;
 	line-height: 18px;
 	color: #666666;
 }
@@ -1629,7 +1634,7 @@ a {
 .pagination-current {
 	width: 44px;
 	height: 44px;
-	border:3px solid #eeeeee;
+	border:3px solid #dbdbdb;
 }
 
 
