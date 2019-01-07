@@ -42,6 +42,29 @@ close.addEventListener
   pptextarea.classList.remove("invalid");
 });
 
+
+  ppname.addEventListener
+  ("click", function (evt) 
+  {
+  evt.preventDefault();
+  ppname.classList.remove("invalid");
+});
+
+  ppemail.addEventListener
+  ("click", function (evt) 
+  {
+  evt.preventDefault();
+  ppemail.classList.remove("invalid");
+});
+
+  pptextarea.addEventListener
+  ("click", function (evt) 
+  {
+  evt.preventDefault();
+  pptextarea.classList.remove("invalid");
+});
+
+
 form.addEventListener("submit", function(evt) {
   if (!ppname.value || !ppemail.value || !pptextarea.value) 
   {
@@ -87,4 +110,6 @@ window.addEventListener("keydown", function(evt)
     }
    }
   });
+
+
    

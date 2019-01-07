@@ -5,7 +5,7 @@
     <title>HTML Academy: Нёрдс</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/min.style.css">
   </head>
   <body>
     <header  class="main-header">
@@ -123,14 +123,14 @@
       </div>
       <section class="contacts">
         <h2 class="visually-hidden">как до нас добраться</h2>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CBFh4QaroB" width="1200" height="416"></iframe>
+       <iframe src="https://yandex.ru/map-widget/v1/-/CBFh4QaroB" width="1200" height="416"></iframe>
         <img src="img/map.png" width="1200" height="416" alt="Санкт-Петербург,ул. Б. Конюшенная, д. 19/8">
         <div class="container">
           <div class="contacts-container">
             <h3 class="contacts-heading">NЁRDS DESIGN STUDIO</h3>
             <p class="contacts-adress">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
             <p class="contacts-phone">тел. +7 (812) 275-75-75</p>
-            <button class="contacts-btn btn" type="button">напишите нам</button>
+            <a href="" class="contacts-btn btn">напишите нам</a>
           </div>
         </div>
       </section>
@@ -169,7 +169,7 @@
         <div class="pop-up__column">
           <p>
             <label for="name" class="pop-up__label"> Ваше имя:</label>
-            <input class="popup-input" type="text" name="name" placeholder="Имя Фамилия" id="name"  >
+            <input class="popup-input" type="user" name="name" placeholder="Имя Фамилия" id="name" pattern="^[А-Яа-яЁё\s]+$">
           </p>
           <p>
             <label for="email" class="pop-up__label"> Ваш e-mail:</label>
