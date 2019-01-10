@@ -230,7 +230,7 @@ a {
 .slider-controls label {
   	position: relative;
   	display: inline-block;
-  	text-align:center;
+  	vertical-align: center;
   	width: 18px;
   	height: 18px;
   	padding: 8px;
@@ -459,7 +459,7 @@ a {
 
 .service-list__item-link {
 	display: inline-block;
-	text-align:center;
+	vertical-align: center;
 	padding:16px 40px;
 	min-width: 81px;
 	line-height: 18px;
@@ -790,7 +790,7 @@ a {
 
 .contacts-btn {
 	display: inline-block;
-	text-align:center;
+	vertical-align: center;
 	padding:15px 43px;
 	min-width: 132px;
 	border-radius: 3px;
@@ -1032,7 +1032,7 @@ a {
 
 .pop-up__btn {
 	display: inline-block;
-	text-align:center;
+	vertical-align: center;
 	padding:16px 80px;
 	min-width: 100px;
 	border-radius: 3px;
@@ -1248,6 +1248,7 @@ a {
 
 .price-controls label {
 	display: inline-block;
+	vertical-align: center;
 	text-align:left;
 	width: 50%;
 	font-size: 16px;
@@ -1392,7 +1393,7 @@ a {
 
 .filters__btn {
 	display: inline-block;
-	text-align:center;
+	vertical-align: center;
 	width: 100%;
 	padding:16px 60px;
 	border-radius: 3px;
@@ -1557,6 +1558,11 @@ a {
 	opacity: 1;
 }
 
+.current-arrow:before,
+.current-arrow:hover:before,
+.current-arrow:focus:before {
+	opacity: 1;
+}
 
 .catalog-list__item:nth-child(2n) {
 	margin-right:0;
@@ -1641,7 +1647,7 @@ a {
 
 .catalog-list__item-btn {
 	display: inline-block;
-	text-align:center;
+	vertical-align: center;
 	min-width: 78px;
 	padding:16px 61px;
 	border-radius: 3px;
