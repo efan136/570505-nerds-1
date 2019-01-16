@@ -724,7 +724,9 @@ a {
 .contacts {
 	position: relative;
 	width: 100%;
-	min-height: 416px;
+	min-height: 308px;
+	padding-top: 54px;
+	padding-bottom: 54px;
 	margin: 0 auto;
 	margin-bottom: 67px;
 	background: url("../img/map1440.png") no-repeat 50% 50% ;
@@ -739,21 +741,17 @@ a {
 	left:0;
 	border:0;
 	width: 100%;
-	min-width: 1200px;
+	height: 100%;
 }
 
 
-
-
 .contacts-container {
-	position: absolute;
+	position: relative;
 	z-index: 5;
-	bottom:54px;
 	width: 220px;
-	height: 212px;
-	padding:47px 50px;
+	min-height: 212px;
+	padding:49px 50px;
 	background-color: #ffffff;
-	overflow: auto;
 }
 
 
